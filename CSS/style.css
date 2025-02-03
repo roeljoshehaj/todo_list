@@ -1,7 +1,8 @@
 body {
     font-family: Arial, sans-serif;
+    height: 80vh;
     text-align: center;
-    background: #1e3a5f;
+    background: linear-gradient(to bottom, #1e3a5f, #345678);
     color: white;
     padding: 50px;
 }
@@ -9,48 +10,66 @@ body {
 .container {
     max-width: 400px;
     margin: auto;
-    background: #2d4f72;
+    background: transparent;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: none;
 }
 
 h1 {
-    margin-bottom: 20px;
+    font-size: 48px; /* Bigger text */
+    font-weight: 300; /* Thinner text */
+    position: static;
+    margin-top: -20px;
+}
+
+.taskbar {
+    position: relative;
+    z-index: 0;
+    width: 100px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    gap: 10px;
 }
 
 input {
-    width: 70%;
+    flex-grow: 1;
+    width: 80%;
+    border: 2px solid black;
     padding: 10px;
-    border: none;
-    border-radius: 5px;
+    left : -10px;
+    border-radius: 25px;
+    background: #000;
+    color: white;
+    outline: none;
+    position: absolute;
+    z-index: 0;
 }
 
 button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+    position: absolute;
+    right: -10px;
+    width:30%;
+    border: 2px solid #ff9800;
+    top: 0;
+    border-radius: 25px;
+    border-left: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    z-index: 10;
+    padding: 10px 15px;
     background: #ff9800;
     color: white;
     cursor: pointer;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    background: #3b6ea5;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.completed {
-    text-decoration: line-through;
-    opacity: 0.6;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-left: -10px; /* Ensures button is seamlessly inside taskbar */
 }
