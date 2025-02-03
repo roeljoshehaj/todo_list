@@ -17,8 +17,8 @@ body {
 }
 
 h1 {
-    font-size: 48px; /* Bigger text */
-    font-weight: 300; /* Thinner text */
+    font-size: 48px; 
+    font-weight: 300; 
     position: static;
     margin-top: -20px;
 }
@@ -71,5 +71,5 @@ button {
     cursor: pointer;
     font-weight: bold;
     white-space: nowrap;
-    margin-left: -10px; /* Ensures button is seamlessly inside taskbar */
+    margin-left: -10px; 
 }
